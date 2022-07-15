@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import MovieCard from './MovieCard';
 import './App.css';
-//import searchIcon from './search.svg'
+import SearchIcon from './search.svg'
 
 // c19fdc19 -API KEY
 
@@ -75,7 +75,7 @@ function App() {
 
       <div className='search'>
         <input placeholder='Search for Movies' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
-        <img src='SearchIcon' alt="search" onClick={() => searchMovies(searchTerm)}/> {/* will act as a button*/} 
+        <img src={SearchIcon} alt="search" onClick={() => searchMovies(searchTerm)}/> {/* will act as a button*/} 
       </div>
 
       {/*if there is data in the state, render the movie component - if not - render error message*/}
